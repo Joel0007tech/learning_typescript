@@ -1,6 +1,4 @@
 "use strict";
-const greeting33 = "Hello, TypeScript!";
-console.log(greeting33);
 function printMessage(message) {
     if (typeof message === "string") {
         // If the value is a string, print the message in uppercase.
@@ -12,4 +10,4 @@ function printMessage(message) {
     }
 }
 printMessage("Hello!"); // Output: Message is: HELLO!
-printMessage(123); // Output: Provided value is not a string.
+printMessage(123);
