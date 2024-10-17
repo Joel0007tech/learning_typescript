@@ -98,13 +98,13 @@ function add(a: number, b: number) {
   number1.push(4);
   console.log(number1);
   
-
   const numbers: any= [1, 2, 4]
   numbers.push('Joel');
 
   console.log(numbers);
 
-  const mixed: (number | string )[] =[1, "Mason", 2]
-  console.log(mixed.slice(2));
+  const mixed: number[] =[1, 5, 2, 6, 10, 30]
+  const break1 = mixed.slice(2,4)
+  console.log(break1);
   
   
