@@ -14,3 +14,82 @@ function printMessage(message: any) {
 printMessage("Hello!");  // Output: Message is: HELLO!
 printMessage(123);       // Output: Provided value is not a string.
 
+function add(a: number, b: number) {
+    return a - b; // TypeScript infers the return type as 'number'
+  }
+
+  let result = add(10, 20); // result is inferred as 'number'
+  console.log("The answer is " + result );
+  
+  let messageDet: string 
+  messageDet = "Hi"
+  console.log(messageDet);
+  
+  function createId(id: number | string) {
+    if (typeof id === "string") {
+      // Here, TypeScript knows 'id' is a string
+      return id.length;
+    } else {
+      // Here, TypeScript knows 'id' is a number
+      console.log(id);
+    }
+  }
+
+  type Age = number | string;  // Age can be a number or a string
+  type FirstName = string;
+  type LastName = string;
+
+  // Now Let’s use type aliases to describe the structure of object
+  type Employee = {
+    x: Age,
+    y: FirstName,
+    z: LastName
+  };
+
+  // Let’s use the Employee type alias to create an actual employee object:
+
+  const age: Age = 24;  // Age can be a number or string
+  const firstname: FirstName = "Samson";
+  const lastname: LastName = "Nebeolisa";
+
+  const employee: Employee = {
+    x: age,      // x represents the age (number or string)
+    y: firstname, // y is the first name
+    z: lastname   // z is the last name
+  };
+
+  const createEmployee = (user: Employee) => {
+    console.log("The employee's age is " + user.x);
+    console.log("The employee's first name is " + user.y);
+    console.log("The employee's last name is " + user.z);
+  };
+
+  createEmployee({ x: 24, y: "Samson", z: "Nebeolisa" }); // function call
+
+  // output:
+  // The employee's age is 24
+  // The employee's first name is Samson
+  // The employee's last name is Nebeolisa
+
+  type IsTrue = boolean;
+  type Ages = string | number;
+
+  type Details = {
+    a: IsTrue
+    b: Ages
+  }
+
+  const isTrue: IsTrue = true;
+  const ages: Ages = 23;
+
+  const details: Details = {
+    a: isTrue,
+    b: ages
+  }
+
+  const myDetails = (me: Details) => {
+    console.log("My age is " + me.a);
+    console.log("I am " + me.b); 
+  };
+
+  myDetails({ a:isTrue, b:ages})
