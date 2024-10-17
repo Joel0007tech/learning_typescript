@@ -93,3 +93,18 @@ function add(a: number, b: number) {
   };
 
   myDetails({ a:isTrue, b:ages})
+
+  const number1: number[] = [1, 2, 3]
+  number1.push(4);
+  console.log(number1);
+  
+
+  const numbers: any= [1, 2, 4]
+  numbers.push('Joel');
+
+  console.log(numbers);
+
+  const mixed: (number | string )[] =[1, "Mason", 2]
+  console.log(mixed.slice(2));
+  
+  

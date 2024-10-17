@@ -3,49 +3,44 @@ const greeting33 = "Hello, TypeScript!";
 console.log(greeting33);
 function printMessage(message) {
     if (typeof message === "string") {
-        // If the value is a string, print the message in uppercase.
         console.log("Message is: " + message.toUpperCase());
     }
     else {
-        // If the value is not a string, alert the user.
         console.log("Provided value is not a string.");
     }
 }
-printMessage("Hello!"); // Output: Message is: HELLO!
-printMessage(123); // Output: Provided value is not a string.
+printMessage("Hello!");
+printMessage(123);
 function add(a, b) {
-    return a - b; // TypeScript infers the return type as 'number'
+    return a - b;
 }
-let result = add(10, 20); // result is inferred as 'number'
+let result = add(10, 20);
 console.log("The answer is " + result);
 let messageDet;
 messageDet = "Hi";
 console.log(messageDet);
 function createId(id) {
     if (typeof id === "string") {
-        // Here, TypeScript knows 'id' is a string
         return id.length;
     }
     else {
-        // Here, TypeScript knows 'id' is a number
         console.log(id);
     }
 }
-// Let’s use the Employee type alias to create an actual employee object:
-const age = 24; // Age can be a number or string
+const age = 24;
 const firstname = "Samson";
 const lastname = "Nebeolisa";
 const employee = {
-    x: age, // x represents the age (number or string)
-    y: firstname, // y is the first name
-    z: lastname // z is the last name
+    x: age,
+    y: firstname,
+    z: lastname
 };
 const createEmployee = (user) => {
     console.log("The employee's age is " + user.x);
     console.log("The employee's first name is " + user.y);
     console.log("The employee's last name is " + user.z);
 };
-createEmployee({ x: 24, y: "Samson", z: "Nebeolisa" }); // function call
+createEmployee({ x: 24, y: "Samson", z: "Nebeolisa" });
 const isTrue = true;
 const ages = 23;
 const details = {
@@ -57,3 +52,12 @@ const myDetails = (me) => {
     console.log("I am " + me.b);
 };
 myDetails({ a: isTrue, b: ages });
+const number1 = [1, 2, 3];
+number1.push(4);
+console.log(number1);
+const numbers = [1, 2, 4];
+numbers.push('Joel');
+console.log(numbers);
+const mixed = [1, "Mason", 2];
+console.log(mixed.slice(2));
+//# sourceMappingURL=script.js.map
