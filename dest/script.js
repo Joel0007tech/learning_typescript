@@ -61,4 +61,9 @@ console.log(numbers);
 const mixed = [1, 5, 2, 6, 10, 30];
 const break1 = mixed.slice(2, 4);
 console.log(break1);
+const functionArray = [
+    () => console.log("First function"),
+    () => console.log("Second function")
+];
+functionArray.forEach(func => func());
 //# sourceMappingURL=script.js.map

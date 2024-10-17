@@ -106,5 +106,12 @@ function add(a: number, b: number) {
   const mixed: number[] =[1, 5, 2, 6, 10, 30]
   const break1 = mixed.slice(2,4)
   console.log(break1);
+
+  const functionArray: Array<() => void> = [
+    () => console.log("First function"),
+    () => console.log("Second function")
+  ];
+
+  functionArray.forEach(func => func());  // This will call both functions.
   
   
