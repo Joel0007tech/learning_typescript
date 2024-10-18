@@ -80,4 +80,14 @@ console.log(user2);
 console.log(user3);
 console.log(user4);
 console.log(change);
+const response = [200, "Success", "Failure"];
+if (response[0] === 200) {
+    console.log(`Response: ${response[2]}`);
+}
+function logMessage(logLevel) {
+    const [level, ...messageParts] = logLevel;
+    console.log(`Level ${level}:`, messageParts.join(" "));
+}
+logMessage([1, "System", "Error", "occurred"]);
+logMessage([2, "User", "logged", "in"]);
 //# sourceMappingURL=script.js.map

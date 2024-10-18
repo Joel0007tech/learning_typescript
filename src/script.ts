@@ -136,7 +136,27 @@ function add(a: number, b: number) {
   console.log(user3);
   console.log(user4);
   console.log(change);
+
+  type HttpResponse = [number, ...string[]];
+
+  const response: HttpResponse = [200, "Success", "Failure" ];
+
+  if (response[0] === 200) {
+    console.log(`Response: ${response[2]}`); // Output: Response: Success
+  }
+
   
+  function logMessage(logLevel: [number, ...string[]]): void {
+    const [level, ...messageParts] = logLevel;
+
+    console.log(`Level ${level}:`, messageParts.join(" "));
+  }
+
+  logMessage([1, "System", "Error", "occurred"]);
+  // Output: Level 1: System Error occurred
+
+  logMessage([2, "User", "logged", "in"]);
+  // Output: Level 2: User logged in
   
   
   
