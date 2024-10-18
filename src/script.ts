@@ -113,5 +113,13 @@ function add(a: number, b: number) {
   ];
 
   functionArray.forEach(func => func());  // This will call both functions.
+
+  let myActivities: [string, boolean];
+  myActivities = ["Joel", true];
+
+  console.log(myActivities);
+
+  let tuple:
+  
   
   

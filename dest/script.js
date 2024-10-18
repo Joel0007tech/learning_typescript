@@ -66,4 +66,8 @@ const functionArray = [
     () => console.log("Second function")
 ];
 functionArray.forEach(func => func());
+let myActivities;
+myActivities = ["Joel", true];
+console.log(myActivities);
+let tuple;
 //# sourceMappingURL=script.js.map
