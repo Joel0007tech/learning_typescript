@@ -70,4 +70,14 @@ let myActivities;
 myActivities = ["Joel", true];
 console.log(myActivities);
 let tuple;
+const user1 = ["Joel", 7];
+const user2 = ["Dorcas", 22, true];
+const user3 = ["Hello", 99, false, true];
+const user4 = ["World", true, 30, 45];
+const change = user4.slice(0, 2);
+console.log(user1);
+console.log(user2);
+console.log(user3);
+console.log(user4);
+console.log(change);
 //# sourceMappingURL=script.js.map
