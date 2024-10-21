@@ -185,6 +185,22 @@ function add(a: number, b: number) {
   // greet();      // ❌ Error: Expected 1 argument, but got 0.
   greet("Joel"); // Works fine
   // greet(23);    // ❌ Error: Argument of type 'number' is not assignable to parameter of type 'string'.
+
+    // Function with default and optional parameter
+  function greeT(name: string = "Jackson", greeting: string = "Hello", punctuation?: string): string {
+    return `${greeting}, ${name}${punctuation || "!"}`;
+  }
+
+  // Call signature for the function
+  type GreetSignature = (name: string, greeting?: string, punctuation?: string) => string;
+
+  // Using the call signature
+  const greeTFn: GreetSignature = (name, greeting = "Hi", punctuation) => {
+    return `${greeting}, ${name}${punctuation || "!"}`;
+  };
+
+  console.log(greeTFn("Anorld")); // Output: Hi, Arnold!
+  console.log(greeTFn("Bob", "Good morning", ".")); // Output: Good morning, Bob.
   
   
   

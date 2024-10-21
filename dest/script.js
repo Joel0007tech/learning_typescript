@@ -106,4 +106,12 @@ const greet = (name) => {
     console.log("Hello, " + name.toUpperCase(), "how are you?");
 };
 greet("Joel");
+function greeT(name = "Jackson", greeting = "Hello", punctuation) {
+    return `${greeting}, ${name}${punctuation || "!"}`;
+}
+const greeTFn = (name, greeting = "Hi", punctuation) => {
+    return `${greeting}, ${name}${punctuation || "!"}`;
+};
+console.log(greeTFn("Anorld"));
+console.log(greeTFn("Bob", "Good morning", "."));
 //# sourceMappingURL=script.js.map
