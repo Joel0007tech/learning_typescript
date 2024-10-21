@@ -96,5 +96,14 @@ userDet = {
     age: 23,
     isCorrect: true
 };
-console.log(userDet.name);
+console.log(userDet);
+const timeFrame = {
+    "Alice": 25,
+    "Bob": 30
+};
+console.log(timeFrame["Alice"]);
+const greet = (name) => {
+    console.log("Hello, " + name.toUpperCase(), "how are you?");
+};
+greet("Joel");
 //# sourceMappingURL=script.js.map

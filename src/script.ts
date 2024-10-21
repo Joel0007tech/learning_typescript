@@ -157,14 +157,34 @@ function add(a: number, b: number) {
   logMessage([2, "User", "logged", "in"]);
   // Output: Level 2: User logged in
 
-  let userDet : {name: string; age:number; isCorrect:boolean }
+  let userDet : {name: string; age:number; isCorrect?:boolean }
   userDet ={
     name:"Joel",
     age:23,
     isCorrect:true
   }
   
-  console.log(userDet.name);
+  console.log(userDet);
+
+    interface AgeMap {
+    [name: string]: number;
+  }
+
+  const timeFrame: AgeMap = {
+    "Alice": 25,
+    "Bob": 30
+  };
+
+  console.log(timeFrame["Alice"]); // Output: 25
+
+    // The parameter name is explicitly set to be of type string.
+  const greet = (name: string) => {
+    console.log("Hello, " + name.toUpperCase(), "how are you?");
+  };
+
+  // greet();      // ❌ Error: Expected 1 argument, but got 0.
+  greet("Joel"); // Works fine
+  // greet(23);    // ❌ Error: Argument of type 'number' is not assignable to parameter of type 'string'.
   
   
   
