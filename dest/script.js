@@ -90,4 +90,11 @@ function logMessage(logLevel) {
 }
 logMessage([1, "System", "Error", "occurred"]);
 logMessage([2, "User", "logged", "in"]);
+let userDet;
+userDet = {
+    name: "Joel",
+    age: 23,
+    isCorrect: true
+};
+console.log(userDet.name);
 //# sourceMappingURL=script.js.map

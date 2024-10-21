@@ -144,7 +144,6 @@ function add(a: number, b: number) {
   if (response[0] === 200) {
     console.log(`Response: ${response[2]}`); // Output: Response: Success
   }
-
   
   function logMessage(logLevel: [number, ...string[]]): void {
     const [level, ...messageParts] = logLevel;
@@ -157,6 +156,15 @@ function add(a: number, b: number) {
 
   logMessage([2, "User", "logged", "in"]);
   // Output: Level 2: User logged in
+
+  let userDet : {name: string; age:number; isCorrect:boolean }
+  userDet ={
+    name:"Joel",
+    age:23,
+    isCorrect:true
+  }
+  
+  console.log(userDet.name);
   
   
   
