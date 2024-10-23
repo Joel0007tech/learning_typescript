@@ -126,14 +126,14 @@ function add(a: number, b: number) {
   
    const user1: StringNumberBooleans = ["Joel", 7];
    const user2: StringNumberBooleans = ["Dorcas", 22, true];
-   const user3: StringNumberBooleans = ["Hello",  99, false, true]
+  //  const user3: StringNumberBooleans = ["Hello",  99, false, true]
    const user4: StringBooleanNumber = ["World", true, 30, 45]
 
   const change = user4.slice(0,2)
 
   console.log(user1);
   console.log(user2);
-  console.log(user3);
+  // console.log(user3);
   console.log(user4);
   console.log(change);
 
@@ -199,22 +199,33 @@ function add(a: number, b: number) {
     return `${greeting}, ${name}${punctuation || "!"}`;
   };
 
-  console.log(greeTFn("Anorld")); // Output: Hi, Arnold!
-  console.log(greeTFn("Bob", "Good morning", ".")); // Output: Good morning, Bob.
-
-    function checkSwitch(value: string | number | boolean) {
-    switch (typeof value) {
-      case "string":
-        console.log("It's a string!");
-        break;
-      case "number":
-        console.log("It's a number!");
-        break;
-      case "boolean":
-        console.log("It's a boolean!");
-        break;
+  function printLength(value: string | number) {
+    // Check if the value is a string
+    if (typeof value === "string") {
+      // Inside this block, TypeScript now knows 'value' is a string
+      console.log(value.length);  // String-specific method
+    } else {
+      // Inside this block, TypeScript knows 'value' is a number
+      console.log(value);  // Number-specific logic
     }
   }
+
+  const colors = {
+    red: "#ff0000",
+    green: "#00ff00",
+    blue: "#0000ff",
+  };
+
+  type ColorKeys = keyof typeof colors; // 'red' | 'green' | 'blue'
+
+  function getColor(color: ColorKeys): any {
+    return colors[color];
+  }
+
+  console.log(getColor("red")); // "#ff0000"
+
+  // Trying to pass anything outside 'red' | 'green' | 'blue' values causes an error
+  console.log(getColor("yellow")); // ❌ Error: Argument of type '"yellow"' is not assignable to parameter of type 'ColorKeys'.
   
   
   

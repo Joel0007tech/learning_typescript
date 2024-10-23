@@ -72,12 +72,10 @@ console.log(myActivities);
 let tuple;
 const user1 = ["Joel", 7];
 const user2 = ["Dorcas", 22, true];
-const user3 = ["Hello", 99, false, true];
 const user4 = ["World", true, 30, 45];
 const change = user4.slice(0, 2);
 console.log(user1);
 console.log(user2);
-console.log(user3);
 console.log(user4);
 console.log(change);
 const response = [200, "Success", "Failure"];
@@ -112,19 +110,22 @@ function greeT(name = "Jackson", greeting = "Hello", punctuation) {
 const greeTFn = (name, greeting = "Hi", punctuation) => {
     return `${greeting}, ${name}${punctuation || "!"}`;
 };
-console.log(greeTFn("Anorld"));
-console.log(greeTFn("Bob", "Good morning", "."));
-function checkSwitch(value) {
-    switch (typeof value) {
-        case "string":
-            console.log("It's a string!");
-            break;
-        case "number":
-            console.log("It's a number!");
-            break;
-        case "boolean":
-            console.log("It's a boolean!");
-            break;
+function printLength(value) {
+    if (typeof value === "string") {
+        console.log(value.length);
+    }
+    else {
+        console.log(value);
     }
 }
+const colors = {
+    red: "#ff0000",
+    green: "#00ff00",
+    blue: "#0000ff",
+};
+function getColor(color) {
+    return colors[color];
+}
+console.log(getColor("red"));
+console.log(getColor("yellow"));
 //# sourceMappingURL=script.js.map
