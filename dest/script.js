@@ -132,7 +132,7 @@ const appDiv = document.getElementById('app');
 const button = document.getElementById('changeText');
 if (appDiv && button) {
     button.addEventListener('click', () => {
-        const heading = appDiv.querySelector('h1');
+        const heading = appDiv.querySelector('h3');
         if (heading) {
             heading.textContent = 'Text Changed!';
         }

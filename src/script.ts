@@ -235,7 +235,7 @@ function add(a: number, b: number) {
 
     button.addEventListener('click', () => {
 
-      const heading = appDiv.querySelector('h1'); // Element | null
+      const heading = appDiv.querySelector('h3'); // Element | null
 
       if (heading) {
 
