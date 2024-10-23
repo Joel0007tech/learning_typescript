@@ -228,6 +228,20 @@ function add(a: number, b: number) {
   console.log(getColor("yellow")); // ❌ Error: Argument of type '"yellow"' is not assignable to parameter of type 'ColorKeys'.
   
   
-  
+  const appDiv = document.getElementById('app'); // TypeScript infers: HTMLElement | null
+  const button = document.getElementById('changeText'); // HTMLElement | null
+
+  if (appDiv && button) {
+
+    button.addEventListener('click', () => {
+
+      const heading = appDiv.querySelector('h1'); // Element | null
+
+      if (heading) {
+
+        heading.textContent = 'Text Changed!'; // Change the text of the heading
+      }
+    });
+  }
   
   

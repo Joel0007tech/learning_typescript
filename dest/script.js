@@ -128,4 +128,14 @@ function getColor(color) {
 }
 console.log(getColor("red"));
 console.log(getColor("yellow"));
+const appDiv = document.getElementById('app');
+const button = document.getElementById('changeText');
+if (appDiv && button) {
+    button.addEventListener('click', () => {
+        const heading = appDiv.querySelector('h1');
+        if (heading) {
+            heading.textContent = 'Text Changed!';
+        }
+    });
+}
 //# sourceMappingURL=script.js.map
