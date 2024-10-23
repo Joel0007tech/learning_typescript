@@ -114,4 +114,17 @@ const greeTFn = (name, greeting = "Hi", punctuation) => {
 };
 console.log(greeTFn("Anorld"));
 console.log(greeTFn("Bob", "Good morning", "."));
+function checkSwitch(value) {
+    switch (typeof value) {
+        case "string":
+            console.log("It's a string!");
+            break;
+        case "number":
+            console.log("It's a number!");
+            break;
+        case "boolean":
+            console.log("It's a boolean!");
+            break;
+    }
+}
 //# sourceMappingURL=script.js.map

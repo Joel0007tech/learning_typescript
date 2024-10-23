@@ -201,6 +201,20 @@ function add(a: number, b: number) {
 
   console.log(greeTFn("Anorld")); // Output: Hi, Arnold!
   console.log(greeTFn("Bob", "Good morning", ".")); // Output: Good morning, Bob.
+
+    function checkSwitch(value: string | number | boolean) {
+    switch (typeof value) {
+      case "string":
+        console.log("It's a string!");
+        break;
+      case "number":
+        console.log("It's a number!");
+        break;
+      case "boolean":
+        console.log("It's a boolean!");
+        break;
+    }
+  }
   
   
   
